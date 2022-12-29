@@ -25,3 +25,16 @@ const isEven = (num) => {
 console.log(isEven(50));
 console.log(isEven(75));
 console.log(isEven(-1));
+
+// 3.3 Bean Counting
+const countChar = (string, char) => {
+  let count = 0;
+  for (let c of string) {
+    if (c === char) {
+      count++;
+    }
+  }
+  return count;
+};
+
+console.log(countChar("BaBaBy", "B"));
