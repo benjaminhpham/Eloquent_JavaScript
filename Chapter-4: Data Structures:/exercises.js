@@ -28,3 +28,14 @@ const sum = (arr) => {
 console.log(sum(range(1, 10, 2)));
 console.log(sum(range(5, 2, -1)));
 console.log(sum(range(1, 10)));
+
+// 4.2 Reversing an Array
+const reverseArray = (arr) => {
+  let reverseArr = [];
+  for (let e of arr) {
+    reverseArr.unshift(e);
+  }
+  return reverseArr;
+};
+
+console.log(reverseArray([1, 2, 3, 4, 5]));
