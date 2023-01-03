@@ -7,6 +7,21 @@ const arr = [
 
 console.log(arr.reduce((acc, curr) => acc.concat(curr)));
 
+// 5.2 Your Own Loop
+const loop = (value, test, update, body) => {
+  while (test(value)) {
+    body(value);
+    value = update(value);
+  }
+};
+
+loop(
+  0,
+  (n) => n < 10,
+  (n) => n + 1,
+  console.log
+);
+
 // 5.3 Everything
 const everyWithLoop = (array, test) => {
   for (let element of array) {
