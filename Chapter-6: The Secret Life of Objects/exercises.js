@@ -19,3 +19,35 @@ const vec1 = new Vec(3, 4);
 console.log(vec1.plus(new Vec(6, 7)));
 console.log(vec1.minus(new Vec(6, 7)));
 console.log(vec1.length);
+
+//6.2 Groups
+class Group {
+  constructor() {
+    this.group = [];
+  }
+  add(value) {
+    if (!this.group.includes(value)) {
+      this.group.push(value);
+    }
+  }
+  delete(value) {
+    if (this.group.includes(value)) {
+      this.group.splice(this.group.indexOf(value), 1);
+    }
+  }
+  has(value) {
+    if (this.group.indexOf(value) === -1) {
+      return false;
+    }
+    return true;
+  }
+}
+
+const group = new Group();
+group.add(1);
+group.add(2);
+group.add(3);
+group.delete(2);
+console.log(group.has(2));
+console.log(group.has(3));
+console.log(group);
