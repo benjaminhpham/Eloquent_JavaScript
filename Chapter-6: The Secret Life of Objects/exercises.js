@@ -51,3 +51,9 @@ group.delete(2);
 console.log(group.has(2));
 console.log(group.has(3));
 console.log(group);
+
+// 6.2 Browing a Method
+let map = { one: 1, two: 2, three: 3, hasOwnProperty: true };
+console.log(Object.hasOwnProperty.call(map, "one"));
+console.log(Object.hasOwnProperty.call(map, "hasOwnProperty"));
+console.log(Object.hasOwnProperty.call(map, "abcdefg"));
